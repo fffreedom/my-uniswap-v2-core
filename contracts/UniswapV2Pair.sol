@@ -382,7 +382,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
             if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
             //如果`输出数量1` > 0 安全发送`输出数量1`的token1到to地址
             if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
-            //如果data的长度大于0 调用to地址的接口
+            //如果data的长度大于0 调用to地址的接口，data用于执行闪电贷
             if (data.length > 0)
                 IUniswapV2Callee(to).uniswapV2Call(
                     msg.sender,
