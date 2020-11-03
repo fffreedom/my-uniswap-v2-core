@@ -92,6 +92,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
     /**
      * @dev 修饰符:锁定运行防止重入
+     * "_"代表修饰符代码
      */
     modifier lock() {
         require(unlocked == 1, "UniswapV2: LOCKED");
