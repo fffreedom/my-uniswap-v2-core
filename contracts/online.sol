@@ -345,6 +345,7 @@ library UniswapV2Library {
      * @param reserveIn 储备量In
      * @param reserveOut 储备量Out
      * @return amounts  输出数额
+     * x*y=k===>(reserveIn+amountIn)*(reserveOut-amoutOut)=reserveIn*reserveOut
      */
     // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(
